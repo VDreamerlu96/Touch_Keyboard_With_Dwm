@@ -200,7 +200,7 @@ static char is_alt_press = 0;         /*依托*/
 static inline void touch_alt(int fd){
     if(is_alt_press){
         send_key_event(fd,KEY_LEFTALT,0);
-        is_shift_press = 0;
+        is_alt_press = 0;
     }else{
         send_key_event(fd,KEY_LEFTALT,1);
         is_alt_press = 1;
